@@ -93,4 +93,4 @@ function evaluarNota(nota, nombre = "Estudiante") {
 evaluarNota(95, "María");
 evaluarNota(82, "Luis");
 evaluarNota(67, "Ana");
-evaluarNota((Cincuenta) => 50, "Juan");
+evaluarNota(50, "Juan");
