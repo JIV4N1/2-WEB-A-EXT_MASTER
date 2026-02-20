@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Caja de Comentarios</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      #comentarios {
+        margin-top: 20px;
+      }
+      .comentario {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+      .fecha {
+        font-size: 0.8em;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Caja de Comentarios</h1>
+    <form id="formComentario">
+      <textarea
+        id="textoComentario"
+        rows="4"
+        cols="50"
+        placeholder="Escribe tu comentario..."
+      ></textarea
+      ><br />
+      <button type="submit">Agregar comentario</button>
+    </form>
+    <div id="comentarios"></div>
+
+    <script src="caja_comentarios.js"></script>
+  </body>
+</html>
