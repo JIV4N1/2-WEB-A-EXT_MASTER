@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Seguimiento de Libros - Comentarios</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Seguimiento de Libros — Caja de Comentarios</h1>
+
+      <form id="comment-form" class="comment-form">
+        <label for="comment">Escribe tu comentario:</label>
+        <textarea
+          id="comment"
+          name="comment"
+          rows="3"
+          placeholder="Comparte tu opinión sobre el libro..."
+          required
+        ></textarea>
+        <div class="form-actions">
+          <button type="submit" id="add-btn">Agregar comentario</button>
+        </div>
+      </form>
+
+      <section id="comments-section">
+        <h2>Comentarios</h2>
+        <ul id="comments-list" class="comments-list"></ul>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
