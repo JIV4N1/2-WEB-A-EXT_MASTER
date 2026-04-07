@@ -8,8 +8,8 @@ export const encontrarPrimerPar = (invitados) => {
   let j = 1;
 
   while (j < invitados.length) {
-    const a = typeof invitados[i] === 'string' ? invitados[i].trim() : '';
-    const b = typeof invitados[j] === 'string' ? invitados[j].trim() : '';
+    const a = typeof invitados[i] === "string" ? invitados[i].trim() : "";
+    const b = typeof invitados[j] === "string" ? invitados[j].trim() : "";
 
     if (a && b) {
       const inicialA = a[0].toLowerCase();
@@ -25,22 +25,24 @@ export const encontrarPrimerPar = (invitados) => {
 };
 
 // Casos de prueba
-const lista1 = ['Ana', 'Beatriz', 'Bruno', 'Carlos', 'Cecilia'];
-const lista2 = ['Alberto', 'Ana', 'Bea', 'Carla'];
-const lista3 = ['Diego', 'Elena', 'Fernando'];
+const lista1 = ["Ana", "Beatriz", "Bruno", "Carlos", "Cecilia"];
+const lista2 = ["Alberto", "Ana", "Bea", "Carla"];
+const lista3 = ["Diego", "Elena", "Fernando"];
 const lista4 = [];
-const lista5 = ['Gabriela'];
+const lista5 = ["Gabriela"];
 
 const pruebas = [
-  { name: 'lista1', data: lista1 },
-  { name: 'lista2', data: lista2 },
-  { name: 'lista3', data: lista3 },
-  { name: 'lista4', data: lista4 },
-  { name: 'lista5', data: lista5 }
+  { name: "lista1", data: lista1 },
+  { name: "lista2", data: lista2 },
+  { name: "lista3", data: lista3 },
+  { name: "lista4", data: lista4 },
+  { name: "lista5", data: lista5 },
 ];
 
-console.log('Búsqueda de primer par de invitados consecutivos con misma inicial');
-pruebas.forEach(p => {
+console.log(
+  "Búsqueda de primer par de invitados consecutivos con misma inicial",
+);
+pruebas.forEach((p) => {
   const res = encontrarPrimerPar(p.data);
   if (res) {
     console.log(`${p.name}: Encontrado -> ${res[0]} y ${res[1]}`);
