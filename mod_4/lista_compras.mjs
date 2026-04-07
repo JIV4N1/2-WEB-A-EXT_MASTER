@@ -5,19 +5,23 @@
 export const listaDeCompras = [];
 
 export const agregarProducto = (producto) => {
-  if (!producto || typeof producto !== 'string') return false;
+  if (!producto || typeof producto !== "string") return false;
   const prod = producto.trim();
   if (!prod) return false;
-  const existe = listaDeCompras.some(p => p.toLowerCase() === prod.toLowerCase());
+  const existe = listaDeCompras.some(
+    (p) => p.toLowerCase() === prod.toLowerCase(),
+  );
   if (existe) return false;
   listaDeCompras.push(prod);
   return true;
 };
 
 export const eliminarProducto = (producto) => {
-  if (!producto || typeof producto !== 'string') return false;
+  if (!producto || typeof producto !== "string") return false;
   const prod = producto.trim();
-  const index = listaDeCompras.findIndex(p => p.toLowerCase() === prod.toLowerCase());
+  const index = listaDeCompras.findIndex(
+    (p) => p.toLowerCase() === prod.toLowerCase(),
+  );
   if (index === -1) return false;
   listaDeCompras.splice(index, 1);
   return true;
@@ -25,9 +29,9 @@ export const eliminarProducto = (producto) => {
 
 export const mostrarLista = () => {
   if (listaDeCompras.length === 0) {
-    console.log('La lista de compras está vacía.');
+    console.log("La lista de compras está vacía.");
     return;
   }
-  console.log('Lista de compras:');
+  console.log("Lista de compras:");
   listaDeCompras.forEach((p, i) => console.log(`${i + 1}. ${p}`));
 };
